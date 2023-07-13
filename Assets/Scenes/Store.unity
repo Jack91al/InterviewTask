@@ -1823,7 +1823,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   price: 5
-  clothesIndex: 0
+  shirtIndex: 0
+  specialIndex: 0
   priceText: {fileID: 1381866225}
   bought: 0
   isSelling: 1
@@ -1958,7 +1959,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   price: 5000
-  clothesIndex: 0
+  shirtIndex: 0
+  specialIndex: 0
   priceText: {fileID: 942838047}
   bought: 0
   isSelling: 1
@@ -2169,7 +2171,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &758701419
 Transform:
   m_ObjectHideFlags: 0
@@ -2828,7 +2830,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   price: 1000
-  clothesIndex: 4
+  shirtIndex: 0
+  specialIndex: 1
   priceText: {fileID: 1804023063}
   bought: 0
   isSelling: 0
@@ -3713,7 +3716,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   price: 500
-  clothesIndex: 3
+  shirtIndex: 3
+  specialIndex: 0
   priceText: {fileID: 94374005}
   bought: 0
   isSelling: 0
@@ -4033,7 +4037,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   price: 125
-  clothesIndex: 0
+  shirtIndex: 0
+  specialIndex: 0
   priceText: {fileID: 1782894237}
   bought: 0
   isSelling: 1
@@ -4226,8 +4231,6 @@ GameObject:
   - component: {fileID: 1205666532}
   - component: {fileID: 1205666534}
   - component: {fileID: 1205666533}
-  - component: {fileID: 1205666536}
-  - component: {fileID: 1205666535}
   m_Layer: 5
   m_Name: Store UI
   m_TagString: Untagged
@@ -4300,36 +4303,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1205666531}
   m_CullTransparentMesh: 1
---- !u!114 &1205666535
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1205666531}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fdf8d7926059bd44a3e0aec1bae9438, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  storeState: 0
-  shirtButton: {fileID: 1699892039}
-  specialButton: {fileID: 1093337986}
-  shirtOptions: {fileID: 0}
-  specialOptions: {fileID: 0}
-  sellOptions: {fileID: 0}
---- !u!114 &1205666536
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1205666531}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3f8ff3796655ef44af22e8317129838, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1232327209
 GameObject:
   m_ObjectHideFlags: 0
@@ -4385,7 +4358,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   price: 0
-  clothesIndex: 3
+  shirtIndex: 3
+  specialIndex: 0
   priceText: {fileID: 1421082609}
   bought: 1
   isSelling: 0
@@ -4614,7 +4588,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   price: 0
-  clothesIndex: 1
+  shirtIndex: 1
+  specialIndex: 0
   priceText: {fileID: 2034414482}
   bought: 1
   isSelling: 0
@@ -4767,7 +4742,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   price: 0
-  clothesIndex: 2
+  shirtIndex: 2
+  specialIndex: 0
   priceText: {fileID: 72773287}
   bought: 1
   isSelling: 0
@@ -6354,7 +6330,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   price: 100
-  clothesIndex: 1
+  shirtIndex: 1
+  specialIndex: 0
   priceText: {fileID: 1426475715}
   bought: 0
   isSelling: 0
@@ -6702,7 +6679,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   price: 200
-  clothesIndex: 2
+  shirtIndex: 2
+  specialIndex: 0
   priceText: {fileID: 1581934900}
   bought: 0
   isSelling: 0
@@ -9371,7 +9349,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   price: 0
-  clothesIndex: 1
+  shirtIndex: 0
+  specialIndex: 1
   priceText: {fileID: 453177814}
   bought: 1
   isSelling: 0

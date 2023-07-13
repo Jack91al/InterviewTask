@@ -52,7 +52,8 @@ public class PlayerClothing : MonoBehaviour
                 topSprites[top].SetActive(false);
 
             specialSprites[special].SetActive(true);
-            playerMovement.animCurrentClothes = specialSprites[top].GetComponent<Animator>();
+            playerMovement.animCurrentClothes = specialSprites[special].GetComponent<Animator>();
+            
         }
 
         playerMovement.ResetAnim();

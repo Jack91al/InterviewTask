@@ -7,7 +7,7 @@ using TMPro;
 public class StoreOption : MonoBehaviour
 {
     Button button;
-    [SerializeField] private int price, clothesIndex;
+    [SerializeField] private int price, shirtIndex, specialIndex;
     [SerializeField] private TMP_Text priceText;
 
     [SerializeField] private bool bought, isSelling;
@@ -50,18 +50,22 @@ public class StoreOption : MonoBehaviour
         {
             if(bought)
             {
-                PlayerClothing.instance.top = clothesIndex;
+                PlayerClothing.instance.top = shirtIndex;
+                PlayerClothing.instance.special = specialIndex;
+                PlayerClothing.instance.UpdateClothes();
             }
 
             else
             {
-                PlayerClothing.instance.top = clothesIndex;
+                PlayerClothing.instance.top = shirtIndex;
+                PlayerClothing.instance.special = specialIndex;
                 GameManager.instance.playerMoney -= price;
 
+                PlayerClothing.instance.UpdateClothes();
                 Destroy(gameObject);
             }
 
-            PlayerClothing.instance.UpdateClothes();
+            
             
         }
     }
