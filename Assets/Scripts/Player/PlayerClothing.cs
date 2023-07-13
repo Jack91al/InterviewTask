@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class PlayerClothing : MonoBehaviour
 {
+    public static PlayerClothing instance; 
+
     PlayerMovement playerMovement;
-    [SerializeField] private int top, special;
+    public int top, special;
     private int pTop, pSpecial;
 
     [SerializeField] private GameObject[] topSprites = new GameObject[4];
@@ -15,6 +17,7 @@ public class PlayerClothing : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        instance = this;
         playerMovement = GetComponent<PlayerMovement>();
     }
 
