@@ -4,47 +4,54 @@ using UnityEngine;
 
 public class PlayerClothing : MonoBehaviour
 {
-    [SerializeField] private int hat, top, special;
-    private int pHat, pTop, pSpecial;
+    PlayerMovement playerMovement;
+    [SerializeField] private int top, special;
+    private int pTop, pSpecial;
 
-    [SerializeField] private GameObject[] hatSprites = new GameObject[3];
-    [SerializeField] private GameObject[] topSprites = new GameObject[3];
+    [SerializeField] private GameObject[] topSprites = new GameObject[4];
     [SerializeField] private GameObject[] specialSprites = new GameObject[2];
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        playerMovement = GetComponent<PlayerMovement>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.L)) //Debug use only, delete later
+            UpdateClothes();
     }
     
     public void UpdateClothes()
     {
-        for (int i = 0; i < hatSprites.Length; i++)
-        {
-            hatSprites[i].SetActive(false);
-        }
-
-        hatSprites[hat].SetActive(true);
-
         for (int i = 0; i < topSprites.Length; i++)
         {
-            hatSprites[i].SetActive(false);
+            topSprites[i].SetActive(false);
         }
 
-        topSprites[top].SetActive(true);
+        if(top != 0)
+        {
+            topSprites[top].SetActive(true);
+            playerMovement.animCurrentClothes = topSprites[top].GetComponent<Animator>();
+        }       
 
         for (int i = 0; i < specialSprites.Length; i++)
         {
-            hatSprites[i].SetActive(false);
+            specialSprites[i].SetActive(false);
         }
 
-        specialSprites[hat].SetActive(true);
+        if(special != 0)
+        {
+            if(top != 0)
+                topSprites[top].SetActive(false);
+
+            specialSprites[special].SetActive(true);
+            playerMovement.animCurrentClothes = specialSprites[top].GetComponent<Animator>();
+        }
+
+        playerMovement.ResetAnim();
     }
 }
