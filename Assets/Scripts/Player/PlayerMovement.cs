@@ -18,14 +18,12 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 moveDir;
 
     #endregion
-    // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animPlayer = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         MovementStates();
@@ -66,7 +64,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    void Movement()
+    void Movement() //This function handles the movement of the player.
     {
         if(canMove)
         {
@@ -76,7 +74,7 @@ public class PlayerMovement : MonoBehaviour
         }        
     }
 
-    void Flip()
+    void Flip() //Flips the player's character sprite. 
     {
         switch (moveDir.x)
         {
@@ -96,7 +94,7 @@ public class PlayerMovement : MonoBehaviour
             transform.localScale = new Vector3(1, 1, 1);
     }
 
-    public void ResetAnim()
+    public void ResetAnim() //Resets the animations to prevent sync issues.
     {
         animPlayer.Play("PlayerIdle", -1, 0.0f);
         animPlayer.SetBool("Walking", true);

@@ -6,23 +6,26 @@ using TMPro;
 
 public class StoreOption : MonoBehaviour
 {
+    //This script determines the properties such as price for the items in the store and control what happens when you click on them.
+
+    #region Variables 
+
     Button button;
-    [SerializeField] private int price, shirtIndex, specialIndex;
+    [SerializeField] private int price, shirtIndex, specialIndex; 
     [SerializeField] private TMP_Text priceText;
 
     [SerializeField] private bool bought, isSelling;
 
+    #endregion
 
-    // Start is called before the first frame update
     void Start()
     {
         button = GetComponent<Button>();
     }
 
-    // Update is called once per frame
-    void Update()
+    void Update() 
     {
-        if (isSelling)
+        if (isSelling) //Determines if the player can buy the item depending on how much money they have.
         {
             if (button.enabled)
                 priceText.text = "" + price;

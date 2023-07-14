@@ -5,6 +5,8 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
+    //The Game Manager in this case is used to manage the money counters on the User Interface.
+
     public static GameManager instance;
 
     [SerializeField] private TMP_Text[] moneyCounters;

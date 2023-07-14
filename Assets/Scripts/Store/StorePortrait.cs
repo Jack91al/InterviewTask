@@ -5,19 +5,18 @@ using UnityEngine.UI;
 
 public class StorePortrait : MonoBehaviour
 {
+    //This class checks the variables in the "PlayerClothing" class in order to change the sprite of the player character portrait in the store. 
     PlayerClothing playerClothing;
     [SerializeField] private Image frame;
     [SerializeField] private Sprite[] portraits;
 
 
-    // Start is called before the first frame update
     void Start()
     {
         frame = GetComponent<Image>();
         playerClothing = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerClothing>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if(playerClothing.special != 1)

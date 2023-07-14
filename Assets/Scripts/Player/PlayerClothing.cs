@@ -14,21 +14,18 @@ public class PlayerClothing : MonoBehaviour
     [SerializeField] private GameObject[] specialSprites = new GameObject[2];
 
 
-    // Start is called before the first frame update
     void Start()
     {
         instance = this;
         playerMovement = GetComponent<PlayerMovement>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.L)) //Debug use only, delete later
-            UpdateClothes();
+
     }
     
-    public void UpdateClothes()
+    public void UpdateClothes() //Checks the "Top" and "Special" variables on this class to change the player's character clothes. 
     {
         for (int i = 0; i < topSprites.Length; i++)
         {
